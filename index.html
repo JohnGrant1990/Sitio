@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JURASSIC PARK - Isla Nublar | El Parque Prehistórico</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Bienvenido a Jurassic Park en Isla Nublar. Explora el parque de dinosaurios con expediciones extremas, resorts de lujo y tours entre carnívoros.">
+    <meta name="keywords" content="Jurassic Park, Isla Nublar, T-Rex, dinosaurios, InGen, peligro, aventura, tour jurasico">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="/CSS/style.css">
+
+    <link rel="icon" href="/Favicon/Logo02.ico">
+</head>
+<body class="bg-dark text-light">
+
+    <!-- CINTA DE ADVERTENCIA SUPERIOR -->
+    <div class="hazard-stripe text-dark text-center fw-bold py-1 text-uppercase tracking-wide small" id="hazard-banner">
+        ⚠️ ADVERTENCIA: ZONA DE CONTENCIÓN NIVELES 4 Y 5 ACTIVA — MANTÉNGASE EN LAS RUTAS AUTORIZADAS ⚠️
+    </div>
+
+    <!-- PANEL INTERACTIVO DE CONTROL (CONTROL DE SEGURIDAD JS) -->
+    <div class="bg-black py-2 border-bottom border-danger text-center">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <span class="small text-warning fw-bold mb-1 mb-md-0" id="system-status-text">
+                🟢 Estado del Sistema: Cercos Electrificados Operando (10,000V)
+            </span>
+            <button id="btn-toggle-alarm" class="btn btn-sm btn-danger fw-bold text-uppercase">
+                🚨 Activar Protocolo de Emergencia (Corte de Energía)
+            </button>
+        </div>
+    </div>
+
+    <!-- SECCIÓN HERO / ENCABEZADO PRINCIPAL -->
+    <header class="hero-section text-center d-flex flex-column justify-content-between">
+        <div class="container pt-4">
+            <div class="mb-3">
+                <span class="badge bg-danger fs-6 text-uppercase px-3 py-2 border border-warning shadow-sm">
+                    <i class="fa-solid fa-triangle-exclamation me-1"></i> Isla Nublar
+                </span>
+            </div>
+            <h1 class="display-1 fw-bold hero-title text-uppercase animate-fade">
+                🦖 JURASSIC PARK 🦕
+            </h1>
+            <p class="lead hero-subtitle text-warning fw-bold">
+                🌴 DONDE LA VIDA SE ABRE CAMINO 🌋
+            </p>
+        </div>
+
+        <!-- BARRA DE NAVEGACIÓN -->
+        <div class="container-fluid hero-nav-bar p-0 mt-4 border-top border-bottom border-warning">
+            <div class="row g-0 text-center">
+                <div class="col-4 hero-nav-item py-3 border-end border-secondary">
+                    <a href="#expediciones" class="nav-link-custom text-uppercase fw-bold">
+                        <i class="fa-solid fa-compass me-2 text-danger"></i> 🌋 Expediciones
+                    </a>
+                </div>
+                <div class="col-4 hero-nav-item py-3 border-end border-secondary">
+                    <a href="#resort" class="nav-link-custom text-uppercase fw-bold">
+                        <i class="fa-solid fa-hotel me-2 text-warning"></i> 🏨 Resort
+                    </a>
+                </div>
+                <div class="col-4 hero-nav-item py-3">
+                    <a href="#tours" class="nav-link-custom text-uppercase fw-bold">
+                        <i class="fa-solid fa-binoculars me-2 text-success"></i> 🦖 Tours
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: EXPEDICIONES -->
+        <section id="expediciones" class="py-5 bg-jp-dark text-light border-bottom border-danger">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-4 section-title text-warning text-uppercase">
+                        ⚠️ EL PARQUE MAS MODERNO DEL MUNDO 🦖
+                    </h2>
+                    <div class="title-underline bg-danger mx-auto"></div>
+                </div>
+
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="image-container border-jp-danger shadow-lg rounded overflow-hidden position-relative">
+                            <img src="/Imagenes/Jurassic-Park-Nublar01.png" alt="Safari Explorer en Jurassic Park" class="img-fluid w-100 object-fit-cover">
+                            <div class="position-absolute top-0 end-0 bg-danger text-white px-3 py-1 fw-bold small">
+                                🐊 ZONA DE RIESGO
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <p class="fs-5 lh-lg text-light">
+                            Adéntrate en la reserva biológica más peligrosa y fascinante del planeta. Experimenta la adrenalina pura al observar especies extintas devueltas a la vida mediante la ingeniería genética de <strong class="text-danger">InGen</strong>.
+                        </p>
+                        <div class="alert alert-warning border-danger bg-dark text-warning mt-3 d-flex align-items-center" role="alert">
+                            <i class="fa-solid fa-biohazard fs-3 me-3 text-danger"></i>
+                            <div>
+                                <strong>Aviso de Seguridad InGen:</strong> Haz clic en cualquier tarjeta de atracción o hotel abajo para consultar el reporte de seguridad en tiempo real. 🚨
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARACTERÍSTICAS -->
+                <div class="row text-center mt-5 pt-3 g-4">
+                    <div class="col-md-4">
+                        <div class="p-4 card-jp-feature rounded border border-warning h-100">
+                            <div class="icon-box mb-3 text-danger fs-1">🛰️</div>
+                            <h5 class="text-warning fw-bold text-uppercase">Bio-Rastreo Satelital</h5>
+                            <p class="text-light small m-0">Monitoreo térmico constante de cada ejemplar en tiempo real a través de la red de contención.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 card-jp-feature rounded border border-danger h-100">
+                            <div class="icon-box mb-3 text-warning fs-1">🧬</div>
+                            <h5 class="text-warning fw-bold text-uppercase">ADN Sintético InGen</h5>
+                            <p class="text-light small m-0">Reconstrucción genómica precisa extraída de mosquitos fosilizados en ámbar milenario.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 card-jp-feature rounded border border-danger h-100">
+                            <div class="icon-box mb-3 text-success fs-1">🚙</div>
+                            <h5 class="text-warning fw-bold text-uppercase">Vehículos Blindados</h5>
+                            <p class="text-light small m-0">Cruceros eléctricos automatizados sobre rieles con cristal acorazado de alto impacto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER DE TRANSICIÓN -->
+        <section class="banner-destinos text-center py-5 d-flex align-items-center justify-content-center position-relative">
+            <div class="container position-relative z-1">
+                <h2 class="display-3 fw-bold text-uppercase text-warning text-shadow-dark m-0">
+                    🌋 ZONAS DE ACCESO RESTRINGIDO 🐊
+                </h2>
+                <p class="lead text-danger fw-bold m-0">INSPECCIÓN DE CERCOS ELÉCTRICOS EN CURSO</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: RESORT & HOTELES -->
+        <section id="resort" class="py-5 bg-black border-bottom border-warning">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-4 section-title text-danger text-uppercase">
+                        🏨 RESORT DE SEGURIDAD 🌴
+                    </h2>
+                    <p class="text-warning col-lg-8 mx-auto fw-bold">Refugios de alta tecnología con confort premium de 5 estrellas frente a la selva jurásica.</p>
+                    <div class="title-underline bg-warning mx-auto"></div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-jp border-warning bg-jp-card h-100" data-attraction="Nublar Lodge & Spa">
+                            <div class="position-relative">
+                                <img src="/Imagenes/Safari_Lodge.jpg" class="card-img-top" alt="Nublar Lodge">
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2 fw-bold">🌴 VISTA A LA SELVA</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-danger fw-bold text-uppercase">Safari Lodge</h5>
+                                <p class="card-text text-light small">Cabañas fortificadas rodeadas de vegetación autóctona con búnker subterráneo privado.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-jp border-danger bg-jp-card h-100" data-attraction="Hotel">
+                            <div class="position-relative">
+                                <img src="/Imagenes/Hotel.png" class="card-img-top" alt="Suite InGen">
+                                <span class="badge bg-danger text-white position-absolute top-0 start-0 m-2 fw-bold">🚨 BLINDAJE MÁXIMO</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-warning fw-bold text-uppercase">🏢 Hotel</h5>
+                                <p class="card-text text-light small">Habitaciones con cristal anti-impacto, generadores auxiliares y acceso directo a helipuerto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mx-auto">
+                        <div class="card card-jp border-warning bg-jp-card h-100" data-attraction="Laguna Azul Resort">
+                            <div class="position-relative">
+                                <img src="/Imagenes/Lagoon_Resort.jpg" class="card-img-top" alt="Playa Resort">
+                                <span class="badge bg-success text-white position-absolute top-0 start-0 m-2 fw-bold">🏖️ ZONA SEGURA</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-danger fw-bold text-uppercase">🏖️ Laguna Azul Resort</h5>
+                                <p class="card-text text-light small">Piscina de borde infinito protegida por redes acústicas repulsoras para mamíferos marinos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: TOURS Y ATRACCIONES -->
+        <section id="tours" class="py-5 bg-jp-dark">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-4 section-title text-warning text-uppercase">
+                        🦖 TOURS Y EXHIBICIONES EN VIVO 🦕
+                    </h2>
+                    <p class="text-light col-lg-8 mx-auto">Visita las instalaciones principales y los encierros de depredadores apex bajo la supervisión de expertos.</p>
+                    <div class="title-underline bg-danger mx-auto"></div>
+                </div>
+
+                <!-- Grid de 6 imágenes -->
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card card-jp border-warning bg-jp-card h-100" data-attraction="Centro de Visitantes">
+                            <img src="/Imagenes/Visitor_Center.jpg" class="card-img-top" alt="Centro de Visitantes">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning fw-bold text-uppercase">🏛️ Centro de Visitantes</h5>
+                                <p class="card-text text-light small">Exposiciones de esqueletos fósiles, laboratorio de incubación y restaurante de lujo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card card-jp border-danger bg-jp-card h-100" data-attraction="Paddock del T-Rex">
+                            <img src="/Imagenes/T_Rex-Paddock.jpg" class="card-img-top" alt="Paddock T-Rex">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger fw-bold text-uppercase">🦖 Paddock del T-Rex</h5>
+                                <p class="card-text text-light small">Alimentación en vivo con observación desde el mirador reforzado con visores nocturnos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card card-jp border-warning bg-jp-card h-100" data-attraction="Valle Brachiosaurus">
+                            <img src="/Imagenes/brachiosaurus.jpg" class="card-img-top" alt="Valle Gigantes">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning fw-bold text-uppercase">🦕 Valle Brachiosaurus</h5>
+                                <p class="card-text text-light small">Paseo panorámico entre gigantes saurópodos que pastan libremente por la sabana de la isla.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card card-jp border-danger bg-jp-card h-100" data-attraction="Fosa de Velociraptors">
+                            <img src="/Imagenes/Velociraptor.jpg" class="card-img-top" alt="Nido Velociraptor">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger fw-bold text-uppercase">🐊 Fosa de Velociraptors</h5>
+                                <p class="card-text text-light small">Observatorio elevado con rejas electrificadas para estudiar la caza en manada de estos cazadores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card card-jp border-warning bg-jp-card h-100" data-attraction="Selva Primigenia">
+                            <img src="/Imagenes/Jungle.jpg" class="card-img-top" alt="Selva Tropical">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning fw-bold text-uppercase">🌴 Selva Primigenia</h5>
+                                <p class="card-text text-light small">Caminata de exploración botánica con guías fuertemente armados en territorio inexplorado.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card card-jp border-warning bg-jp-card h-100" data-attraction="Lab de Embriología">
+                            <img src="/Imagenes/Laboratory.jpg" class="card-img-top" alt="Laboratorio InGen">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning fw-bold text-uppercase">🧬 Lab de Embriología</h5>
+                                <p class="card-text text-light small">Presencia el nacimiento de crías de dinosaurio e interactúa con el sistema informático del parque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-dark bg-black text-white py-5 border-top border-danger">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-3 col-md-4 text-center text-md-start">
+                    <div class="social-icons mb-3">
+                        <a href="#" class="text-danger me-3 fs-3"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-warning me-3 fs-3"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-danger fs-3"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <span class="badge bg-outline-danger border border-danger text-danger">INGEN BIOTECH DIVISION</span>
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="row">
+                        <div class="col-4">
+                            <ul class="list-unstyled footer-links small">
+                                <li><a href="#expediciones" class="text-warning text-decoration-none">🌋 Expediciones</a></li>
+                                <li><a href="#resort" class="text-warning text-decoration-none">🏨 Hoteles</a></li>
+                                <li><a href="#tours" class="text-warning text-decoration-none">🦖 Tours</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <ul class="list-unstyled footer-links small">
+                                <li><a href="#" class="text-secondary text-decoration-none">🧬 Genética</a></li>
+                                <li><a href="#" class="text-secondary text-decoration-none">🐊 Depredadores</a></li>
+                                <li><a href="#" class="text-secondary text-decoration-none">🌴 Mapas</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <ul class="list-unstyled footer-links small">
+                                <li><a href="#" class="text-secondary text-decoration-none">🚁 Helipuerto</a></li>
+                                <li><a href="#" class="text-secondary text-decoration-none">📞 Emergencias</a></li>
+                                <li><a href="#" class="text-secondary text-decoration-none">🔒 Seguridad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 text-center text-lg-end">
+                    <h2 class="fw-bold tracking-wider text-danger m-0 font-jp">🦖 JURASSIC PARK</h2>
+                    <p class="text-warning small m-0">ISLA NUBLAR - COSTA RICA</p>
+                </div>
+            </div>
+            <div class="row mt-4 pt-3 border-top border-secondary text-center">
+                <div class="col">
+                    <p class="text-secondary small mb-0">© 2026 InGen Corporation. "La vida se abre camino." Todos los derechos reservados. 🦖</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script Personalizado -->
+    <script src="/JS/main.js"></script>
+</body>
+</html>
