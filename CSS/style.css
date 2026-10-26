@@ -56,7 +56,7 @@ body.emergency-mode .hazard-stripe {
 
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(8, 8, 8, 0.9)), 
-                url('Imagenes/jurassic_park.jpg') no-repeat center center;
+                url('/Imagenes/jurassic_park.jpg') no-repeat center center;
     background-size: cover;
     min-height: 85vh;
 }
